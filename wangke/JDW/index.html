@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>歪比巴卜搜题 - 简洁、实用的找答案题库</title>
+		<link rel="shortcut icon" href="img/jian.png"/>
+		<link rel="stylesheet" type="text/css" href="./css/_header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			/* border: 0; */
+			font-family: "pingfang";
+		}
+		#main{
+			width: 100%;
+			height: 900px;
+		}
+		.main{
+			background: url(./img/backiee-124405.jpg) no-repeat;
+			background-size: 100%;
+			background-position: left top ;
+			background-attachment:fixed;
+			
+		}
+		.main{
+			width: 100%;
+			height: 900px;
+			/* border: 2px solid red; */
+			
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			z-index: 2;
+			transition: all 1s;
+			
+
+		}
+		.mainFixed{
+			position: fixed;
+			top: -600px;
+			left: 0;
+			z-index: 2;
+			
+		}
+		
+			position: fixed;
+			top: -300px;
+			left: 0;
+		
+		.main img{
+			display: block;
+			padding-top: 60px;
+		}
+		form{
+			width: 680px;
+			height: 110px;
+			
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+		}
+		form .inputBox{
+			width: 680px;
+			height: 49px;
+			background-color: #3478F6;
+		}
+		form .inputBox input{
+			
+			outline: none;
+			width: 680px;
+			border-radius: 6px;
+			height: 49px;
+			border: 1px #CECECE solid;
+			font-size: 20px;
+			line-height: 1.3333333;
+			box-shadow: 0 0 10px #CECECE; 
+			text-indent: 20px;
+		
+		}
+		form .inputBox .fix1{
+			position: fixed;
+			top: 100px;
+			left: 50%;
+			transform: translate(-50%);
+			z-index: 22;
+		}
+		form .inputBox input:hover{
+			box-shadow: 0 0 10px #3478f6;
+		}
+		form button{
+			width: 90px;
+			height: 38px;
+			font-size: 16px;
+			outline: #3478F6;
+			border: 1px solid #E7E7E7;
+			background-color: #fff;
+			border-radius: 6px;
+			cursor: pointer;
+		}
+		form button:hover{
+			color: #3478f6;
+			box-shadow: 0 0 10px #3478f6;
+		}
+		.content1{
+			
+			width: 100%;
+			min-height: 600px;
+
+
+		}
+		.content2{
+			width: 1300px;
+			height: 850px;
+			margin: 25px auto;
+			
+			border-radius: 10px;
+			position: relative;
+			left: 0;
+			top: 0;
+			z-index: 0;
+			
+		}
+		.content2:hover{
+			border-bottom: 2px #777777 solid;
+		
+		
+			
+			}
+		.content2 ul{
+			margin-top: 20px;
+			width: 100%;
+			height: 40px;
+			display: flex;
+			justify-content: flex-start;
+		}
+		.content2 ul li{
+			width: 70px;
+			height: 40px;
+			list-style: none;
+			line-height: 40px;
+			text-align: center;
+			margin-right: 3px;
+			color: #000000;
+			border: 0;
+
+			font-size: 16px;
+			cursor: pointer;
+		}
+		.content2 ul .on{
+			border-bottom: 3px solid black;
+		}
+		.content2 .tab1{
+			width: 100%;
+			min-height: 420px;
+			position: absolute;
+			left: 0;
+			top: 50px;
+			/* background-color: #CECECE; */
+			
+			display: none;
+		}
+		.content2 .show{
+			display: block;
+		}
+		.content2 .tab1 p{
+			margin: 15px;
+			width: 100%;
+			height: 40px;
+
+			font-size: 30px;
+		}
+		.content3{
+			width: 100%;
+			min-height: 750px;
+			/* background-color: red; */
+			display: flex;
+			justify-content: space-around;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			
+			
+		}
+		.content3_1{
+			
+			width: 612px;
+			height: 290px;
+			overflow: hidden;
+			position: relative;
+			transition: all 0.5s;
+			cursor: pointer;
+			
+		}
+		.content3_1 img{
+			display: block;
+			width: 100%;
+		}
+		.content3_1:hover{
+			border-radius: 20px;
+			box-shadow: 0 0 10px #000000;
+			
+			width: 642px;
+			height: 357px;
+		}
+		.content3_1 a:nth-child(2){
+			position: absolute;
+			bottom: 50px;
+			left: 10px;
+			font-size: 30px;
+			color: #fff;
+	
+			text-decoration: none;
+		}
+		.content3_2{
+			overflow: hidden;
+			width: 300px;
+			height: 290px;
+			background-color: #ffffff;
+			transition: all 0.5s;
+			cursor: pointer;
+		
+		}
+		.content3_2:hover{
+			border-radius: 20px;
+			box-shadow: 0 0 10px #000000;
+			width: 330px;
+			height: 372px;
+		}
+		.content3_2 img{
+			display: block;
+			width: 100%;
+			height: 50%;
+		}
+		.content3_2 .title{
+			width: 90%;
+			height: 50%;
+			padding: 20px;
+	
+		}
+		.title a{
+			text-decoration: none;
+			font-size: 25px;
+			color: #000;
+		}
+		.main ul{
+			min-width: 800px;
+			height: 120px;
+			/* background-color: #FF0000; */
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			transition: all 0.5s linear;
+		}
+		.main ul li{
+			display: block;
+			width: 100px;
+			height: 100px;
+			/* background-color: #3478F6; */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			
+		}
+	
+		li img{
+			border-radius: 8px;
+			display: block;
+			width: 50px;
+			height: 50px;
+			cursor: pointer;
+			
+			
+		}
+		ul li:hover img{
+			width: 70px;
+			height: 70px;
+			transition: all 0.2s linear;
+		}
+
+	</style>
+	<body>
+		<header>
+			<ul>
+				<li><a class="logo" href="index.html"></a></li>
+				<div class="right">
+					<li><a href="../denglu.html">登录</a></li>
+					<li><a href="../zhuce.html">注册</a></li>
+					<li style="width: 94px;"><a href="../index.html">首页</a></li>
+				</div>
+			</ul>
+		</header>
+		<div id="main">
+			<div class="main">
+				<div class="img">
+					<a href="#"><img src="img/logo2.png" ></a>
+				</div>
+				<form action="data.html",method="post">
+					
+					<div class="inputBox"><input type="text" name="info" placeholder="在2,000道题中搜索"></div>
+					<button type="submit">立即搜索</button>
+				</form>
+				<ul>
+					<li><img src="./img/baidu.ico" alt=""><a href="https://www.baidu.com/">百度</a></li>
+					<li><img src="./img/csdn.ico" alt=""><a href="https://www.csdn.net/">CSDN</a></li>
+					<li><img src="./img/bilibili.ico" alt=""><a href="https://www.bilibili.com/">bilibili</a></li>
+					<li><img src="./img/icon.svg" alt=""><a href="https://www.iconfont.cn/">iconfont</a></li>
+					<li><img src="./img/qd.ico" alt=""><a href="https://www.qidian.com/">起点</a></li>
+					<li><img src="./img/jian.png" alt=""><a href="https://www.jiandati.com/">简答网</a></li>
+			
+				</ul>
+				
+			</div>
+			
+		</div>
+
+		<div class="content1">
+			<div class="content2">
+				<ul>
+					<li class="on">我的资讯</li>
+					<li>文学报</li>
+				</ul>
+				<!-- tab菜单一 -->
+				<div class="tab1 show">
+					<p>我的资讯</p>
+					<div class="content3">
+						<div class="content3_1">
+							<a href=""><img src="img/1.jpg" ></a>
+							<a href="">2020年我的好物分享：这些新物件都让我倍感幸福</a>
+						</div>
+						<div class="content3_2">
+							<img src="img/1-1.jpg" >
+							<div class="title"><a href="">年度征文 ｜ 2020，我学会了向内探索</a></div>
+						</div>
+						<div class="content3_2">
+							<img src="img/1-2.jpg" >
+							<div class="title">
+								<a href="">App+1 | 用思维导图的形式来组织笔记：Coppice</a>
+								
+							</div>
+						</div>
+						<div class="content3_2">
+							<img src="img/1-4.png" >
+							<div class="title">
+								<a href="">如何更好地保护手机数据隐私？这 10 款 App 你可能用得上</a>
+								
+							</div>
+						</div>
+						<div class="content3_2">
+							<img src="img/1-5.png" >
+							<div class="title">
+								<a href="">Tyme + OmniFocus 时间管理从未如此简单——我的自动化这一年</a>
+								
+							</div>
+						</div>
+						<div class="content3_2">
+							<img src="img/1-6.jpg" >
+							<div class="title">
+								<a href="">年度征文 | 一步步走近自然，写给露营新手的入门说明书</a>
+								
+							</div>
+						</div>
+						<div class="content3_2">
+							<img src="img/1-7.png" >
+							<div class="title">
+								<a href="">什么样的人容易猝死？996 的我该怎么做？</a>
+								
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="tab1 ">
+					<p>文学报</p>
+					<div class="content3">
+						<div class="content3_1">
+							<a href=""><img src="img/2.png" ></a>
+							<a href="">Tyme + OmniFocus 时间管理从未如此简单——我的自动化这一年</a>
+						</div>
+						<div class="content3_2">
+							<img src="img/2-1.jpeg" >
+							<div class="title"><a href="">
+							身边有人心跳骤停，我该怎么办
+							</a></div>
+						</div>
+						<div class="content3_2">
+							<img src="img/2-2.jpg" >
+							<div class="title">
+								<a href="">「理想读者」的入门指南：原来出版这么难</a>
+								
+							</div>
+						</div>
+						<div class="content3_2">
+							<img src="img/2-3.png" >
+							<div class="title">
+								<a href="">在家不知道玩什么，一起开一局剧本杀吧</a>
+								
+							</div>
+						</div>
+						<div class="content3_2">
+							<img src="img/2-4.jpeg" >
+							<div class="title">
+								<a href="">Apple Music 牛年特别策划：10 张明星音乐人「私房」歌单陪你过年</a>
+								
+							</div>
+						</div>
+						<div class="content3_2">
+							<img src="img/2-5.jfif" >
+							<div class="title">
+								<a href="">我的攻守兼备 2020——设备更新篇</a>
+							</div>
+						</div>
+						<div class="content3_2">
+							<img src="img/2-7.png" >
+							<div class="title">
+								<a href="">新玩意 SP｜自购好产品，投稿大乱斗</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="footLeft">
+				<p>第六组:歪比巴卜</p>
+				<p>僵 尸 吃 掉 了 你 的 脑 子</p>
+				<p>李康      |      付灵雅      |      尚红星      |      李嘉欣      |      王胜超      |       钱勋虎</p>
+			</div>
+			<div class="footRight">
+				<div>
+					<img src="img/wb.jpg" >
+					<img src="img/qq.png" >
+				</div>
+				<p style="border-left: #777777 1px dashed; padding-left: 10px;">      意见反馈：<br>823839693@qq.com</p>
+			</div>
+		</footer>
+		</div>
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+			
+			$(window).scroll(function(){
+				let scorH=$(document).scrollTop();
+				if(scorH>100){
+					// console.log(scorH)
+					$(".main ul").css({"opacity":0,"z-index":-3})
+					$("input").addClass("fix1")
+				}else{
+					$("form input").removeClass("fix1")
+					$(".main ul").css({"opacity":1,"z-index":0})
+				}
+
+				if(scorH>600){
+					$(".main").addClass("mainFixed")
+			
+				}
+				else{
+					$("form input").removeClass("fix1")
+					$(".main").removeClass("mainFixed")
+				}
+			})
+			$(".content2 ul li").click(function(){
+				let index=$(this).index()
+				$(".content2 ul li").removeClass("on")
+				$(this).addClass("on")
+				$(".tab1").removeClass("show")
+				$(".tab1").eq(index).addClass("show")
+			})	
+		</script>
+	</body>
+
+</html>
