@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户注册</title>
+		<link rel="stylesheet" href="css/zhuce-style.css" />
+	</head>
+	<body>
+		<div class="box">
+			<div class="hBox">
+				<h2>欢迎注册本平台</h2>
+			</div>
+			<form action="php/register.php" method="post">
+				<div class="nameTxt">
+					<input type="text" name="username" id="username" placeholder="昵称" autocomplete="on" />
+					<span><img src="img/Attention1.png"/>昵称不可以为空</span>
+				</div>
+				<div class="passTxt">
+					<input type="password" name="password" placeholder="密码" required />
+					<span><img src="img/Attention2.png"/>不能包括空格</span>
+					<span><img src="img/Attention2.png"/>长度为8-16个字符</span>
+					<span><img src="img/Attention2.png"/>必须包含字母、数字、符号中至少两种</span>
+				</div>
+				<div class="phoneBox">
+					<select class="bephone" >
+						<option selected="selected">+86</option>
+						<option>中国+86</option>
+						<option>中国香港+852</option>
+						<option>中国澳门+853</option>
+						<option>中国台湾+886</option>
+					</select>
+					<input class="phone" id="phoneValue" type="text" name="phone" placeholder="手机号码" required />
+					<input class="bephone" id="code" type="text" placeholder="默认1234" required />
+					<input class="phone" id="sendCode" type="text" value="发送短信验证码" />
+				</div>
+				<div class="server">
+					<input type="submit" class="btn" value="立即注册"></>
+					<span><img src="img/Attention1.png"/>请先同意服务条款</span>
+				</div>
+				<div class="bottomHint"><input id="checkBox" type="checkbox"/> 我已阅读并同意相关服务条款和隐私政策</div>
+			</form>
+		</div>
+		<script type="text/javascript" src="js/zhuce.js"></script>
+	</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户登录</title>
+		<link rel="stylesheet" href="css/denglu-style.css" />
+	</head>
+	<body>
+		<div id="all">
+			<div id="nav">
+				<ul>
+					<li><a class="on" href="#">用户名登录</a></li>
+					<li><a href="#">微信登录</a></li>
+				</ul>
+			</div>
+			<div id="content">
+				<div id="content-user" class="in">
+					<section id="left-user">
+						<h2>用户账号密码登录</h2>
+						<h3>推荐使用较复杂密码，防止盗号</h3>
+						<form action="php/login.php" method="post" autocomplete="on" >
+							<input type="text" name="username" placeholder="支持用户名登录" autocomplete='off' required /><br><br>
+							<span><img src="img/Attention1.png" />用户名不可以为空</span>
+							<input type="password" name="password" placeholder="密码" required /><br><br><br>
+							<input type="submit" name="submit" id="btn" value="授权并登录" class="btn" /><br><br><br>
+							<span><img src="img/Attention1.png"/>请先同意服务条款</span>
+						</form>
+						<ul class="list-user">
+							<li><a href="#">忘了密码?</a></li>
+							<li><a href="zhuce.html">| 注册新账号</a></li>
+							<li><a href="#">| 意见反馈</a></li>
+						</ul>
+					</section>
+					<section id="right-user">
+						<ul class="lists-user">
+							<li>本平台将获得以下权限</li>
+							<li><input type="checkbox" /> 获得您的昵称、头像、性别</li> 
+							<li><input type="checkbox" /> 获得您的其他信息</li><br>
+							<li>授权后表明您已同意用户名登录服务协议</li>
+						</ul>
+					</section>
+				</div>
+				<div id="content-we">
+					<section id="left-we">
+						<h2>微信账号密码登录</h2>
+						<h3>推荐使用较复杂密码，防止盗号</h3>
+						<form action="php/login.php" method="post" autocomplete="on" onsubmit="return false">
+							<input type="text" name="username" placeholder="支持微信号登录" autocomplete='off' required /><br><br>
+							<span><img src="img/Attention1.png" />微信账号不可以为空</span>
+							<input type="password" name="password" placeholder="密码" required /><br><br><br>
+							<input type="submit" name="submit" value="授权并登录" class="btn" /><br><br><br>
+							<span><img src="img/Attention1.png"/>请先同意服务条款</span>
+						</form>
+						<ul class="list-we">
+							<li><a href="#">忘了密码?</a></li>
+							<li><a href="zhuce.html">| 注册新账号</a></li>
+							<li><a href="#">| 意见反馈</a></li>
+						</ul>
+					</section>
+					<section id="right-we">
+						<ul class="lists-we">
+							<li>本平台将获得以下权限</li>
+							<li><input type="checkbox" /> 获得您的昵称、头像、性别</li>
+							<li><input type="checkbox" /> 获得您的其他信息</li><br>
+							<li>授权后表明您已同意微信登录服务协议</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/denglu.js"></script>
+	</body>
+</html>
